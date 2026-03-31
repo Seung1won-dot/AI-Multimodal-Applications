@@ -1,0 +1,406 @@
+{
+ "nbformat": 4,
+ "nbformat_minor": 0,
+ "metadata": {
+  "colab": {
+   "provenance": [],
+   "authorship_tag": "ABX9TyMYjufHVrvvqB8w2yXtFeNt"
+  },
+  "kernelspec": {
+   "name": "python3",
+   "display_name": "Python 3"
+  },
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "source": [
+    "# 1. print 함수란?\n",
+    "print 함수는 콘솔에 출력을 표시하는 가장 기본적인 함수입니다. 프로그램 실행 중 생성된 값을 사용자에게 보여주거나 디버깅할 때 매우 유용합니다.\n",
+    "\n",
+    "### 기본 문법\n",
+    "```python\n",
+    "print(출력할 내용)\n",
+    "```"
+   ],
+   "metadata": {
+    "id": "laIF0-erzve5"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "print_basic",
+    "executionInfo": {
+      "status": "ok",
+      "timestamp": 1763969000000,
+      "user": {
+       "displayName": "나승원",
+       "userId": "02686597812072679767"
+      }
+     },
+    "outputId": "output-1"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "Hello, Python!\n",
+      "안녕하세요, 파이썬!\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 기본 출력\n",
+    "print(\"Hello, Python!\")\n",
+    "print(\"안녕하세요, 파이썬!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 2. 문자열 출력\n",
+    "문자열을 출력할 때는 작은따옴표(`'`) 또는 큰따옴표(`\"`)를 사용합니다."
+   ],
+   "metadata": {
+    "id": "string_output"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "string_examples",
+    "outputId": "output-2"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "작은따옴표: 파이썬\n",
+      "큰따옴표: 파이썬\n",
+      "세 줄 문자열:\n",
+      "첫 번째 줄\n",
+      "두 번째 줄\n",
+      "세 번째 줄\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 작은따옴표와 큰따옴표\n",
+    "print('작은따옴표: 파이썬')\n",
+    "print(\"큰따옴표: 파이썬\")\n",
+    "\n",
+    "# 세 개의 따옴표 (여러 줄 문자열)\n",
+    "print('''세 줄 문자열:\n",
+    "첫 번째 줄\n",
+    "두 번째 줄\n",
+    "세 번째 줄''')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 3. 숫자 출력\n",
+    "숫자는 따옴표 없이 바로 출력할 수 있습니다."
+   ],
+   "metadata": {
+    "id": "number_output"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "number_examples",
+    "outputId": "output-3"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "정수: 100\n",
+      "실수: 3.14\n",
+      "연산 결과: 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 숫자 출력\n",
+    "print(\"정수:\", 100)\n",
+    "print(\"실수:\", 3.14)\n",
+    "\n",
+    "# 연산 결과 출력\n",
+    "print(\"연산 결과:\", 10 + 5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 4. 여러 값 동시에 출력\n",
+    "print 함수 안에 여러 값을 쉼표(`,`)로 구분하여 출력할 수 있습니다.\n",
+    "쉼표로 구분하면 각 값 사이에 공백이 자동으로 추가됩니다."
+   ],
+   "metadata": {
+    "id": "multiple_output"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "multiple_examples",
+    "outputId": "output-4"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "이름: 김사과, 나이: 20세\n",
+      "값들: 1 2 3 4 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 여러 값 출력\n",
+    "name = \"김사과\"\n",
+    "age = 20\n",
+    "print(\"이름:\", name, \", 나이:\", age, \"세\")\n",
+    "\n",
+    "# 여러 숫자\n",
+    "print(\"값들:\", 1, 2, 3, 4, 5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 5. end 매개변수\n",
+    "print 함수의 기본 동작은 출력이 끝난 후 줄바꿈을 합니다.\n",
+    "`end` 매개변수를 사용하면 줄바꿈 문자를 다른 문자로 변경할 수 있습니다."
+   ],
+   "metadata": {
+    "id": "end_param"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "end_examples",
+    "outputId": "output-5"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "첫 번째 출력 두 번째 출력 세 번째 출력"
+     ]
+    }
+   ],
+   "source": [
+    "# 줄바꿈 없이 출력 (end=\" \")\n",
+    "print(\"첫 번째 출력\", end=\" \")\n",
+    "print(\"두 번째 출력\", end=\" \")\n",
+    "print(\"세 번째 출력\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 6. sep 매개변수\n",
+    "`sep` 매개변수는 여러 값을 출력할 때 구분자를 지정합니다."
+   ],
+   "metadata": {
+    "id": "sep_param"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "sep_examples",
+    "outputId": "output-6"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "2024/01/15\n",
+      "사과-바나나-오렌지\n",
+      "값: 100"
+     ]
+    }
+   ],
+   "source": [
+    "# 구분자 변경\n",
+    "print(2024, 1, 15, sep=\"/\")\n",
+    "\n",
+    "# 다른 구분자 사용\n",
+    "print(\"사과\", \"바나나\", \"오렌지\", sep=\"-\")\n",
+    "\n",
+    "# sep 없이 (기본값은 공백)\n",
+    "print(\"값:\", 100)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 7. 이스케이프 문자\n",
+    "특수한 문자를 출력할 때 이스케이프 문자를 사용합니다.\n",
+    "\n",
+    "| 이스케이프 문자 | 설명 |\n",
+    "|---|---|\n",
+    "| `\\n` | 줄바꿈 |\n",
+    "| `\\t` | 탭(들여쓰기) |\n",
+    "| `\\\\` | 역슬래시 출력 |\n",
+    "| `\\'` | 작은따옴표 출력 |\n",
+    "| `\"` | 큰따옴표 출력 |"
+   ],
+   "metadata": {
+    "id": "escape_chars"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "escape_examples",
+    "outputId": "output-7"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "첫 번째 줄\n",
+      "두 번째 줄\n",
+      "탭:	들여쓰기\n",
+      "역슬래시: \\ \n",
+      "작은따옴표: '\n",
+      "큰따옴표: \""
+     ]
+    }
+   ],
+   "source": [
+    "# 줄바꿈\n",
+    "print(\"첫 번째 줄\\n두 번째 줄\")\n",
+    "\n",
+    "# 탭\n",
+    "print(\"탭:\\t들여쓰기\")\n",
+    "\n",
+    "# 역슬래시\n",
+    "print(\"역슬래시: \\\\ \")\n",
+    "\n",
+    "# 따옴표\n",
+    "print(\"작은따옴표: '\")\n",
+    "print('\"큰따옴표: \"')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 8. f-string (포맷 문자열)\n",
+    "f-string을 사용하면 변수 값을 문자열 안에 쉽게 넣을 수 있습니다.\n",
+    "문자열 앞에 `f`를 붙이고, 중괄호 `{}` 안에 변수나 표현식을 입력합니다."
+   ],
+   "metadata": {
+    "id": "fstring"
+   }
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "id": "fstring_examples",
+    "outputId": "output-8"
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "이름: 김사과, 나이: 20세\n",
+      "10 + 5 = 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "name = \"김사과\"\n",
+    "age = 20\n",
+    "\n",
+    "# f-string 사용\n",
+    "print(f\"이름: {name}, 나이: {age}세\")\n",
+    "\n",
+    "# 표현식 사용\n",
+    "print(f\"10 + 5 = {10 + 5}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "source": [
+    "---\n",
+    "\n",
+    "## 정리\n",
+    "\n",
+    "| 기능 | 예시 | 결과 |\n",
+    "|---|---|---|\n",
+    "| 기본 출력 | `print(\"Hello\")` | Hello |\n",
+    "| 여러 값 | `print(\"A\", \"B\")` | A B |\n",
+    "| 줄바꿈 제거 | `print(\"A\", end=\"\")` | A (줄바꿈 없음) |\n",
+    "| 구분자 변경 | `print(1, 2, sep=\"-\")` | 1-2 |\n",
+    "| f-string | `print(f\"{x}\")` | 변수 값 |"
+   ],
+   "metadata": {
+    "id": "summary"
+   }
+  }
+ ]
+}

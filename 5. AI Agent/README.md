@@ -1,8 +1,8 @@
-# 🤝 AI Agent (LangGraph)
+# AI Agent (LangGraph)
 
 AI 에이전트를 구축하기 위한 LangGraph 프레임워크를 학습하는 과정입니다.
 
-## 📚 학습 내용
+## 학습 내용
 
 ### LangGraph 기초
 - LangGraph의 기본 문법
@@ -12,9 +12,9 @@ AI 에이전트를 구축하기 위한 LangGraph 프레임워크를 학습하는
 
 ### 실전 프로젝트
 - **간단한 챗봇**: LangGraph를 활용한 대화형 에이전트
-- **Reflection 에이전트**: 자기反省 능력을 갖춘 에이전트
+- **Reflection 에이전트**: 스스로 결과를 돌아보고 고치는 에이전트
 
-## 📁 LangGraph란?
+## LangGraph란
 
 LangGraph는 LLM(Large Language Model) 기반 에이전트를 구축하기 위한 프레임워크입니다.
 LangChain을 기반으로 하며, 에이전트의 작업 흐름을 **Directed Graph** 형태로 설계할 수 있습니다.
@@ -25,7 +25,7 @@ LangChain을 기반으로 하며, 에이전트의 작업 흐름을 **Directed Gr
 - **체크포인트**: 상태 저장 및 복원
 - **내장 Persistence**: 대화 기록 관리
 
-## 📁 파일 구성
+## 파일 구성
 
 | 파일명 | 내용 |
 |--------|------|
